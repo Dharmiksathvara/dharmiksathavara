@@ -49,20 +49,20 @@ Description: Gerold - Personal Portfolio HTML5 Template
 	/* ----------------------------------
    @color declaration
   ------------------------------------ */
-	--tj-body: #dddddd;
-	--tj-white: #ffffff;
+	--tj-body: #aba79f;
+	--tj-white: #f6f3ec;
 	--tj-black: #000000;
-	--tj-black-2: #050709;
-	--tj-heading-primary: #102039;
-	--tj-heading-secondary: #ea1826;
-	--tj-theme-primary: #8750f7;
-	--tj-theme-secondary: #2a1454;
-	--tj-theme-accent-1: #0f0715;
-	--tj-theme-accent-2: #140c1c;
-	--tj-grey-1: #747779;
-	--tj-grey-2: #d9d9d9;
-	--tj-grey-3: #dddddd;
-	--tj-grey-4: #22272c;
+	--tj-black-2: #0a0a0c;
+	--tj-heading-primary: #14141a;
+	--tj-heading-secondary: #b1652f;
+	--tj-theme-primary: #c9a86a;
+	--tj-theme-secondary: #8a6d3f;
+	--tj-theme-accent-1: #131317;
+	--tj-theme-accent-2: #1a1a20;
+	--tj-grey-1: #8f8c86;
+	--tj-grey-2: #d4d2cd;
+	--tj-grey-3: #3a3a41;
+	--tj-grey-4: #221f1a;
 	/* ----------------------------------
    @font weight declaration
   ------------------------------------ */
@@ -694,7 +694,7 @@ body.loaded {
 	opacity: 0;
 	transition: 0.3s;
 	background-color: var(--tj-black-2);
-	box-shadow: 0 0 30px rgba(135, 80, 247, 0.2);
+	box-shadow: 0 0 30px rgba(201, 168, 106, 0.2);
 }
 .tj-header-area.header-2.sticky {
 	top: 0;
@@ -885,12 +885,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -915,7 +915,7 @@ body.loaded {
 	text-transform: uppercase;
 	animation: stroke 4s;
 	stroke-width: 1.2;
-	stroke: #4b4b4b;
+	stroke: #46423a;
 	fill: transparent;
 	font-size: 240px;
 	display: inline-block;
@@ -1010,12 +1010,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -1283,12 +1283,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -1870,17 +1870,6 @@ body.loaded {
 	transform: scale(1.1);
 }
 
-.skills-widget .skill-item .number {
-	color: var(--tj-grey-1);
-	font-weight: 800;
-	font-size: 20px;
-	line-height: 1;
-}
-
-.skills-widget .skill-item:hover .number {
-	color: var(--tj-theme-primary);
-}
-
 .skills-widget .skill-item p {
 	color: var(--tj-theme-primary);
 	margin-bottom: 0;
@@ -1910,12 +1899,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(201, 168, 106, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -3393,3 +3382,18 @@ body.absolute_header .breadcrumb_area {
 	left: 0;
 }
 /* END: Breadcrumb Area */
+.tj-btn-secondary:hover {
+	color: var(--tj-white);
+}
+.tj-btn-primary:hover , .tj-btn-primary:focus , .tj-btn-primary:active {
+	color: var(--tj-white);
+
+ 
+}
+.icon-box i{
+color: var(--tj-white);
+}
+
+.institute{
+  color: var(--tj-white) !important;
+}
