@@ -436,5 +436,72 @@ Description: Gerold - Personal Portfolio HTML5 Template
 				});
 			});
 		}
+
+		/*------------------------------------------------------
+  	/  AJAX Contact Forms (Web3Forms)
+  	/------------------------------------------------------*/
+		$(".tj-ajax-form").each(function () {
+			var $form = $(this);
+			var $btn = $form.find('button[type="submit"]');
+			var $msg = $form.find(".tj-form-message");
+			var btnDefaultText = $btn.text();
+
+			$form.on("submit", function (e) {
+				e.preventDefault();
+
+				if ($form.find('[name="botcheck"]').is(":checked")) {
+					return;
+				}
+
+				$msg.removeClass("error success").text("");
+				$btn.addClass("is-loading").prop("disabled", true).text("Sending...");
+
+				var formData = new FormData($form[0]);
+
+				fetch($form.attr("action"), {
+					method: "POST",
+					headers: { Accept: "application/json" },
+					body: formData,
+				})
+					.then(function (response) {
+						return response.json();
+					})
+					.then(function (data) {
+						$btn.removeClass("is-loading").prop("disabled", false).text(btnDefaultText);
+						if (data.success) {
+							$form[0].reset();
+							$("#tjThankYouModal").addClass("active");
+							$("body").addClass("tj-modal-open");
+						} else {
+							$msg
+								.addClass("error")
+								.text(data.message || "Something went wrong. Please try again.");
+						}
+					})
+					.catch(function () {
+						$btn.removeClass("is-loading").prop("disabled", false).text(btnDefaultText);
+						$msg.addClass("error").text("Something went wrong. Please try again later.");
+					});
+			});
+		});
+
+		function closeThankYouModal() {
+			$("#tjThankYouModal").removeClass("active");
+			$("body").removeClass("tj-modal-open");
+		}
+
+		$("#tjThankYouClose, #tjThankYouOk").on("click", closeThankYouModal);
+
+		$("#tjThankYouModal").on("click", function (e) {
+			if (e.target === this) {
+				closeThankYouModal();
+			}
+		});
+
+		$(document).on("keyup", function (e) {
+			if (e.key === "Escape") {
+				closeThankYouModal();
+			}
+		});
 	});
 })(jQuery);
