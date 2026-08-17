@@ -974,7 +974,9 @@ body.loaded {
 	margin-top: 50px;
 	gap: 25px;
 }
-
+.content-box p{
+	color: #fff;
+}
 .hero-image-box img {
 	border-radius: 38px;
 	-webkit-transform: rotate(4.29deg);
@@ -1352,6 +1354,7 @@ body.loaded {
 }
 .portfolio-box .portfolio-item .content-box .portfolio-title {
 	font-size: 30px;
+	margin: 0;
 }
 .portfolio-box .portfolio-item .content-box p {
 	margin-bottom: 0;

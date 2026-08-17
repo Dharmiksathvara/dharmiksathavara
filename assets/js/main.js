@@ -152,6 +152,21 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
+  	/  Carousel Dot Accessibility Labels
+  	/------------------------------------------------------*/
+		$(document).on(
+			"initialized.owl.carousel refreshed.owl.carousel changed.owl.carousel",
+			".owl-carousel",
+			function () {
+				$(this)
+					.find(".owl-dot")
+					.each(function (i) {
+						$(this).attr("aria-label", "Go to slide " + (i + 1));
+					});
+			}
+		);
+
+		/*------------------------------------------------------
   	/  Portfolio Gallery Carousel
   	/------------------------------------------------------*/
 		$(".portfolio_gallery.owl-carousel").owlCarousel({
