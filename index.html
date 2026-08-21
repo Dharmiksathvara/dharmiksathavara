@@ -826,64 +826,90 @@
                                     on interesting web projects.</p>
                             </div>
 
-                            <div class="tj-contact-form">
-                                <form action="https://api.web3forms.com/submit" method="POST" class="tj-ajax-form"
-                                    id="tjMainContactForm">
-                                    <input type="hidden" name="access_key" value="50cec2b1-3ae3-4f50-8774-222d47082cae">
-                                    <input type="hidden" name="subject" value="New message from Portfolio site">
-                                    <input type="hidden" name="from_name" value="Dharmik Sathvara Portfolio">
-                                    <input type="checkbox" name="botcheck" class="d-none" style="display:none">
-                                    <div class="row gx-3">
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="text" name="fname" id="fname" placeholder="First name"
-                                                    autocomplete="off" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="text" name="lname" id="lname" placeholder="Last name"
-                                                    autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="email" name="email" id="email" placeholder="Email address"
-                                                    autocomplete="off" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="tel" name="phone" id="phone" placeholder="Phone number"
-                                                    autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_group">
-                                                <select name="service" id="service" class="tj-nice-select">
-                                                    <option value="" selected disabled>Choose Service</option>
-                                                    <option value="bigcommerce">BigCommerce Development</option>
-                                                    <option value="wordpress">WordPress Development</option>
-                                                    <option value="shopify">Shopify Development</option>
-                                                    <option value="web">Responsive Web Design</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_group">
-                                                <textarea name="message" id="message" placeholder="Message"
-                                                    required></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_btn">
-                                                <button type="submit" class="btn tj-btn-primary">Send Message →</button>
-                                                <div class="tj-form-message" aria-live="polite"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+<div class="tj-contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="tj-ajax-form"
+        id="tjMainContactForm">
+
+        <!-- Web3Forms Settings -->
+        <input type="hidden" name="access_key" value="50cec2b1-3ae3-4f50-8774-222d47082cae">
+        <input type="hidden" name="subject" value="New message from Dharmik Sathvara Portfolio">
+        <input type="hidden" name="from_name" value="Dharmik Sathvara Portfolio">
+
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="d-none" style="display:none">
+
+        <div class="row gx-3">
+
+            <!-- Full Name -->
+            <div class="col-sm-6">
+                <div class="form_group">
+                    <input type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Full name"
+                        autocomplete="name"
+                        required>
+                </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-sm-6">
+                <div class="form_group">
+                    <input type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email address"
+                        autocomplete="email"
+                        required>
+                </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-sm-6">
+                <div class="form_group">
+                    <input type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone number"
+                        autocomplete="tel">
+                </div>
+            </div>
+
+            <!-- Company / Organization -->
+            <div class="col-sm-6">
+                <div class="form_group">
+                    <input type="text"
+                        name="company"
+                        id="company"
+                        placeholder="Company / Organization"
+                        autocomplete="organization">
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="col-12">
+                <div class="form_group">
+                    <textarea name="message"
+                        id="message"
+                        placeholder="Message"
+                        required></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-12">
+                <div class="form_btn">
+                    <button type="submit" class="btn tj-btn-primary">
+                        Send Message →
+                    </button>
+
+                    <div class="tj-form-message" aria-live="polite"></div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
                         </div>
                     </div>
 
