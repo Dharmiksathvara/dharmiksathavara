@@ -1087,6 +1087,9 @@ body.loaded {
 	padding: 30px 0;
 	padding-right: 15%;
 }
+.services-widget .service-item .right-box p{
+	color : #fff ;
+}
 .services-widget .service-item .right-box p:last-child {
 	margin-bottom: 0;
 }
@@ -1223,7 +1226,9 @@ body.loaded {
 	background-color: var(--tj-black-2);
 	border-radius: 60px;
 	padding: 6px 8px;
-	display: inline-block;
+	display: block;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 .portfolio-filter .button-group button {
 	background: transparent;
@@ -1820,7 +1825,13 @@ body.loaded {
 	padding-bottom: 120px;
 	background: var(--tj-theme-accent-1);
 }
-
+#tools-section{
+	padding-top: 0;
+}
+/* #tools-section .container{
+	display: flex;
+	flex-wrap: wrap;
+} */
 .skills-section .section-header {
 	margin-left: auto;
 	margin-right: auto;
